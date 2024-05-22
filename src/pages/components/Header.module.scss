@@ -1,0 +1,73 @@
+header {
+    display: flex;
+    flex-direction: row;
+    height: 60px;
+    width: 100%;
+    background-color: #eaeaea;
+    border-bottom: 1px solid black;
+
+    .logoWrapper {
+      display: flex;
+      width: 80px;
+      height: 100%;
+      margin-left: 10px;
+    }
+
+    .headerContentWrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      gap: 145px;
+      width: 86%;
+
+      .headerToggle {
+        display: flex;
+        justify-content: center;
+        cursor: pointer;
+        padding: 10px;
+        font-size: 20px;
+        background-color: #d3d3d3;
+        border-radius: 10px;
+        width: 100%;
+      }
+
+      .headerContent {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 40px;
+        background-color: #fff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        width: 200px;
+        z-index: 1;
+
+        .classicRand,
+        .stackRand,
+        .gameOption {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          cursor: pointer;
+
+          p {
+            font-size: 20px;
+            margin: 0;
+          }
+        }
+
+        .classicRand:hover,
+        .stackRand:hover,
+        .gameOption:hover {
+          background-color: #eaeaea;
+        }
+      }
+
+      .show {
+        display: flex;
+      }
+    }
+  }

@@ -1,0 +1,143 @@
+.mainWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+
+  .mainContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100%;
+    background-color: #eaeaea;
+
+    .header {
+      display: flex;
+      margin-top: 90px;
+      align-items: center;
+      justify-content: center;
+
+      p {
+        font-size: 30px;
+        font-weight: 600;
+      }
+    }
+
+    .inputWrapper {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      height: 100px;
+      margin-top: 50px;
+      gap: 100px;
+
+      .leftSide,
+      .rightSide {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        p {
+          display: flex;
+          justify-content: center;
+          margin: 0;
+          font-size: 20px;
+          padding: 5px;
+          border-radius: 50px;
+          font-weight: 600;
+          width: 60%;
+          border: 1px solid black;
+        }
+
+        input {
+          display: flex;
+          justify-content: center;
+          margin: 0;
+          margin-top: 10px;
+          border-radius: 50px;
+          background-color: #d3d3d3;
+          width: 100%;
+          height: 100%;
+          font-size: 15px;
+          text-align: center;
+          border: none;
+        }
+      }
+    }
+
+    .btnContainer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 25px;
+
+      .btnBG {
+        position: relative;
+        width: 100px; /* Размер фона */
+        height: 100px; /* Размер фона */
+        background-color: white; /* Цвет фона */
+        border-radius: 50%; /* Круглая форма */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .button {
+          width: 90px; /* Размер кнопки */
+          height: 90px; /* Размер кнопки */
+          background-color: white; /* Цвет кнопки */
+          border: none; /* Без обводки */
+          border-radius: 50%; /* Круглая форма */
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          position: relative;
+          z-index: 1;
+          cursor: pointer;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+          outline: none; /* Убирает стандартное выделение */
+          transition: transform 0.2s ease, background-color 0.2s ease;
+
+          .triangle {
+            width: 0;
+            height: 0;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-bottom: 15px solid #eaeaea; /* Цвет треугольника */
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+          }
+        }
+      }
+    }
+
+    .outputWrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 200px;
+      margin-top: 30px;
+
+      .output {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 30px;
+        width: 45%;
+        font-weight: 600;
+        height: 100%;
+        border-radius: 25px;
+        background-color: #d3d3d3;
+      }
+    }
+  }
+
+  .button:active {
+    transform: scale(0.9); /* Уменьшение при нажатии */
+    background-color: #0056b3; /* Изменение цвета при нажатии */
+  }
+}

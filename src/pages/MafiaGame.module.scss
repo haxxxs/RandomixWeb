@@ -1,0 +1,52 @@
+.mainWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  
+    .mainContainer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-color: #eaeaea;
+      border-radius: 15px;
+      padding: 20px;
+      width: 80vw;
+      max-width: 600px;
+  
+      .roleCard {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: #d3d3d3;
+        border-radius: 15px;
+        padding: 20px;
+        width: 100%;
+        text-align: center;
+  
+        p {
+          font-size: 20px;
+          font-weight: 600;
+          margin-bottom: 10px;
+        }
+  
+        button {
+          background-color: white;
+          border: none;
+          border-radius: 25px;
+          padding: 10px 20px;
+          font-size: 16px;
+          cursor: pointer;
+          transition: background-color 0.2s ease;
+  
+          &:hover {
+            background-color: #ccc;
+          }
+        }
+      }
+    }
+  }
+  

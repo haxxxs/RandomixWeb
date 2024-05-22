@@ -1,0 +1,190 @@
+.mainWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: #eaeaea;
+
+  .mainContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70vw;
+    height: 100vh;
+    border-radius: 15px;
+    padding: 20px;
+    background-color: #d3d3d3;
+
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+
+      p {
+        font-size: 30px;
+        font-weight: 600;
+        background-color: #eaeaea;
+        border-radius: 15px;
+        padding: 15px;
+      }
+    }
+
+    .inputWrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      margin-bottom: 20px;
+      overflow: scroll;
+      max-height: 450px;
+
+      p {
+        font-size: 20px;
+      }
+
+      .playerCountSelector,
+      .mafiaCountSelector {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+        background-color: #eaeaea;
+        border-radius: 5px;
+        align-items: center;
+        p {
+          margin: 0;
+        }
+
+        .selectorButton {
+          border: none;
+          background: none;
+          font-size: 20px;
+          margin: 0 5px;
+          cursor: pointer;
+          padding: 10px 20px;
+          border-radius: 5px;
+          transition: background-color 0.3s;
+
+          &:hover,
+          &.selected {
+            background-color: #d3d3d3;
+          }
+        }
+        .civilianCount {
+          display: flex;
+          justify-content: center;
+          margin-bottom: 20px;
+          margin: 0;
+
+          p {
+            font-size: 20px;
+            font-weight: 600;
+            background-color: #eaeaea;
+            padding: 10px 20px;
+            border-radius: 5px;
+          }
+        }
+      }
+
+      .swipeContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 200px;
+        width: 100%;
+        overflow: hidden;
+        background-color: #eaeaea;
+        border-radius: 15px;
+
+        .playerNameInputWrapper {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          p {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 10px;
+          }
+
+          input {
+            border-radius: 25px;
+            padding: 5px 10px;
+            border: none;
+            font-size: 16px;
+            width: 180px;
+            text-align: center;
+            margin-bottom: 10px;
+          }
+        }
+      }
+    }
+
+    .btnContainer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 25px;
+
+      .btnBG {
+        position: relative;
+        width: 100px;
+        height: 100px;
+        background-color: white;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .button {
+          width: 90px;
+          height: 90px;
+          background-color: white;
+          border: none;
+          border-radius: 50%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          position: relative;
+          z-index: 1;
+          cursor: pointer;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+          outline: none;
+          transition: transform 0.2s ease, background-color 0.2s ease;
+
+          .triangle {
+            width: 0;
+            height: 0;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-bottom: 15px solid #eaeaea;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+          }
+        }
+      }
+    }
+
+    .outputWrapper {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+
+      .roleCard {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 20px;
+        font-weight: 600;
+        width: 45%;
+        margin: 5px;
+        padding: 10px;
+        border-radius: 15px;
+        background-color: #d3d3d3;
+      }
+    }
+  }
+}
